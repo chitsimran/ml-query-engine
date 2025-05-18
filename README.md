@@ -19,12 +19,12 @@ Dataset used - Large Movie Review Dataset [bib](https://ai.stanford.edu/~amaas/p
 
 ## How to run
 
-1. Setup the configs in [config](https://github.com/chitsimran/ml-query-engine/config/config.py) file.
-2. Add the raw unstructured data to the base table. You can either do this manually or use the `insert_raw_data` function in the [utils](https://github.com/chitsimran/ml-query-engine/utils.py) file. If you want to use the `insert_raw_data` method, uncomment the method call line in main file.
+1. Setup the configs in [config](https://github.com/chitsimran/ml-query-engine/blob/main/config/config.py) file.
+2. Add the raw unstructured data to the base table. You can either do this manually or use the `insert_raw_data` function in the [utils](https://github.com/chitsimran/ml-query-engine/blob/main/utils.py) file. If you want to use the `insert_raw_data` method, uncomment the method call line in main file.
 3. Run from the command line with `python main.py`. It will give 3 options (process, query or exit). 
-a. process - This takes the raw unstructured data from base table, pass it to the ML model for processing and persists the result in the output table. I've designed this to exit processing when we hit API rate limits. We can also manually process a few batches by adding break after the first batch is processed. 
-b. query - This will query the processed data. You need to enter a SQL query to query the data.
-c. exit - Exits the program.
+  - process - This takes the raw unstructured data from base table, pass it to the ML model for processing and persists the result in the output table. I've designed this to exit processing when we hit API rate limits. We can also manually process a few batches by adding break after the first batch is processed. 
+  - query - This will query the processed data. You need to enter a SQL query to query the data.
+  - exit - Exits the program.
 
 ## Future work
 
